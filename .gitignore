@@ -1,0 +1,15 @@
+# Môi trường ảo
+.venv/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# PyCharm
+.idea/
+
+# Secrets (nếu sau này có)
+.env
+
+# Windows
+Thumbs.db
