@@ -42,23 +42,51 @@ while True:
             bp = input("Nhập bộ phận: ").strip()
             while not bp:
                 print("🙏 Không được để trống, nhập lại")
-                ten = input("Nhập bộ phận: ").strip()
+                bp = input("Nhập bộ phận: ").strip()
 
             csdl[gen] = {"ten": ten, "bo_phan": bp}
             print(f"🩳 Đã thêm nhân sự {gen}")
 
 
-    # ------3. Sửa ---------
+    # ━━ 3. SỬA ━━
     elif chon == "3":
-        pass
-    # ------4. Xoá ---------
+        gen = input("Nhập mã GEN cần sửa: ").strip()
+        while not gen:
+            print("❌ Không được để trống, nhập lại!")
+            gen = input("Nhập mã GEN cần sửa: ").strip()
+        if gen not in csdl:
+            print(f"❌ Mã GEN '{gen}' không tồn tại!")
+        else:
+            print(f"Thông tin hiện tại: {csdl[gen]}")
+            ten = input("Nhập Họ và Tên mới: ").strip()
+            while not ten:
+                print("❌ Không được để trống, nhập lại!")
+                ten = input("Nhập Họ và Tên mới: ").strip()
+            bp = input("Nhập Bộ Phận mới: ").strip()
+            while not bp:
+                print("❌ Không được để trống, nhập lại!")
+                bp = input("Nhập Bộ Phận mới: ").strip()
+            csdl[gen] = {"ten": ten, "bo_phan": bp}
+            print(f"✅ Đã sửa nhân sự '{gen}'")
+
+    # ━━ 4. XÓA ━━
     elif chon == "4":
-        pass
-    # ------5. Thoát ---------
+        gen = input("Nhập mã GEN cần xóa: ").strip()
+        while not gen:
+            print("❌ Không được để trống, nhập lại!")
+            gen = input("Nhập mã GEN cần xóa: ").strip()
+        if gen not in csdl:
+            print(f"❌ Mã GEN '{gen}' không tồn tại!")
+        else:
+            del csdl[gen]
+            print(f"✅ Đã xóa nhân sự '{gen}'")
+
+    # ━━ 5. THOÁT ━━
     elif chon == "5":
-        print("Tạm biệt! ")
+        print("Tạm biệt!")
         break
-    # Nếu phím bấm không hợp lệ
+
     else:
-        print("Phím bấm 0 hợp lệ")
+        print("⚠️ Lựa chọn không hợp lệ, vui lòng chọn 1-5")
+
 
