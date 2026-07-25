@@ -10,7 +10,7 @@ def hien_thi(csdl):
         print(f"{'Mã Gen' :<10} {'Họ và Tên' :<20} {'Bộ phận'}")
         print("-" * 40)
         for gen, info in csdl.items():
-            print(f"{gen:<10} {info["ten"]:<20} {info["bo_phan"]}")
+            print(f"{gen:<10} {info['ten']:<20} {info['bo_phan']}")
 
 
 def nhap_khong_rong(thong_bao):

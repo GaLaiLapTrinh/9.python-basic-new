@@ -1,0 +1,3 @@
+nguyễn văn A,10
+nguyễn văn B,5
+nguyễn văn C,8
